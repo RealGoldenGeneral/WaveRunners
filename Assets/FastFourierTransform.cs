@@ -1,15 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent (typeof (AudioSource))]
 public class FastFourierTransform : MonoBehaviour
 {
+    public int _numberOfSamples;
     AudioSource _audioSource;
-    public static float[] _samples = new float[512];
+    public static float[] _samples;
     // Start is called before the first frame update
     void Start()
     {
+        if  (_numberOfSamples < 64 || _numberOfSamples > 8192)
+        {
+            _samples = new float[512];
+        }
+        else
+        {
+            _samples = new float[_numberOfSamples];
+        }
         _audioSource = GetComponent<AudioSource> ();
     }
 
