@@ -24,18 +24,29 @@ public class FastFourierTransform : MonoBehaviour
         return ((reversedN << count) & ((1 << bits) - 1));
     }
 
+    public static void Blackman(Complex[] buffer)
+    {
+        for (int i = 0; i < buffer.Length; i++)
+        {
+            double realNum = buffer[i].Real;
+            realNum *= 0.42 - 0.5 * Math.Cos((2 * Math.PI * i) / buffer.Length) + 0.08 * Math.Cos((4 * Math.PI * i) / buffer.Length);
+        }
+    }
+
     /* Uses Cooley-Tukey iterative implementation of FFT
      * assumes no of points provided are a power of 2 */
     public static void FFT(Complex[] buffer)
     {
         int bits = (int)Math.Log(buffer.Length, 2);
-        for (int j = 1; j < buffer.Length; j++)
+        for (int j = 0; j < buffer.Length; j++)
         {
             int swapPos = BitReverse(j, bits);
             var temp = buffer[j];
             buffer[j] = buffer[swapPos];
             buffer[swapPos] = temp;
         }
+
+        Blackman(buffer);
 
         for (int N =  2; N < buffer.Length; N <<= 1)
         {
