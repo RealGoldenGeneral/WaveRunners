@@ -11,9 +11,9 @@ public class Instantiate512Squares : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _barScale = 0.3f / (FastFourierTransform._samples.Length / 64);
-        _sampleCube = new GameObject[FastFourierTransform._samples.Length];
-        for (int i = 0; i < FastFourierTransform._samples.Length; i++)
+        _barScale = 0.3f / (TransformAudio._samples.Length / 64);
+        _sampleCube = new GameObject[TransformAudio._samples.Length];
+        for (int i = 0; i < TransformAudio._samples.Length; i++)
         {
             GameObject _instanceSampleCube = (GameObject)Instantiate(_sampleCubePrefab);
             _instanceSampleCube.transform.position = this.transform.position;
@@ -28,11 +28,11 @@ public class Instantiate512Squares : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < FastFourierTransform._samples.Length; i++)
+        for (int i = 0; i < TransformAudio._samples.Length; i++)
         {
             if (_sampleCube != null)
             {
-                _sampleCube[i].transform.localScale = new Vector3(_barScale, (FastFourierTransform._samples[i] * _maxScale) + 0.05f, _barScale);
+                _sampleCube[i].transform.localScale = new Vector3(_barScale, (TransformAudio._samples[i] * _maxScale) + 0.05f, _barScale);
             }
         }
     }
