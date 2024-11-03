@@ -1,37 +1,60 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
+using System.Numerics;
 using UnityEngine;
 
-[RequireComponent (typeof (AudioSource))]
 public class FastFourierTransform : MonoBehaviour
 {
-    public int _numberOfSamples;
-    AudioSource _audioSource;
-    public static float[] _samples;
-    // Start is called before the first frame update
-    void Start()
+    /* Implementation from https://github.com/tsantosfigueira/fast-fourier-transform
+    * Reverses provided bits for a given length */
+    public static int BitReverse(int n, int bits)
     {
-        if  (_numberOfSamples < 64 || _numberOfSamples > 8192)
+        int reversedN = n;
+        int count = bits + 1;
+
+        n >>= 1;
+        while (n > 0)
         {
-            _samples = new float[512];
+            reversedN = (reversedN << 1) | (n & 1);
+            count--;
+            n >>= 1;
         }
-        else
-        {
-            _samples = new float[_numberOfSamples];
-        }
-        _audioSource = GetComponent<AudioSource> ();
+
+        return ((reversedN << count) & ((1 << bits) - 1));
     }
 
-    // Update is called once per frame
-    void Update()
+    /* Uses Cooley-Tukey iterative implementation of FFT
+     * assumes no of points provided are a power of 2 */
+    public static void FFT(Complex[] buffer)
     {
-        GetSpectrumAudioSource();   
-    }
+        int bits = (int)Math.Log(buffer.Length, 2);
+        for (int j = 1; j < buffer.Length; j++)
+        {
+            int swapPos = BitReverse(j, bits);
+            var temp = buffer[j];
+            buffer[j] = buffer[swapPos];
+            buffer[swapPos] = temp;
+        }
 
-    void GetSpectrumAudioSource()
-    {
-        _audioSource.GetSpectrumData(_samples, 0, FFTWindow.Blackman);
+        for (int N =  2; N < buffer.Length; N <<= 1)
+        {
+            for (int i = 0; i < buffer.Length; i += N)
+            {
+                for (int k = 0; k < N / 2; k++)
+                {
+                    int evenIndex = i + k;
+                    int oddIndex = i + k + (N / 2);
+                    var even = buffer[evenIndex];
+                    var odd = buffer[oddIndex];
+
+                    double term = -2 * Math.PI * k / (double)N;
+                    Complex exp = new Complex(Math.Cos(term), Math.Sin(term)) * odd;
+
+                    buffer[evenIndex] = even + exp;
+                    buffer[oddIndex] = even - exp;
+                }
+            }    
+        }
     }
 }
