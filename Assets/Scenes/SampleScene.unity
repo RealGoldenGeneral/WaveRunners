@@ -167,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55fb3dd58dc742043be311c401571bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _numberOfSamples: 64
 --- !u!82 &122752400
 AudioSource:
   m_ObjectHideFlags: 0
@@ -401,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sampleCubePrefab: {fileID: 6113102894618846674, guid: 401d8319ff3bdc74d934f474065806cf, type: 3}
-  _maxScale: 10000
+  _maxScale: 1
 --- !u!1 &260780611
 GameObject:
   m_ObjectHideFlags: 0
