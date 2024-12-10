@@ -266,7 +266,7 @@ GameObject:
   m_Component:
   - component: {fileID: 122752398}
   - component: {fileID: 122752400}
-  - component: {fileID: 122752399}
+  - component: {fileID: 122752401}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -289,18 +289,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 523543427}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &122752399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 122752397}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55fb3dd58dc742043be311c401571bdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &122752400
 AudioSource:
   m_ObjectHideFlags: 0
@@ -397,6 +385,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &122752401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122752397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55fb3dd58dc742043be311c401571bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &173597695
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +433,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 206965942}
   - component: {fileID: 206965943}
   m_Layer: 0
-  m_Name: InstantiateCubes
+  m_Name: Level Generator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 206965941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 208bf766661ae5a4d90e564d9618a43b, type: 3}
+  m_Script: {fileID: 11500000, guid: 179475bd7569b6c4983d20b66d99db08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sampleCubePrefab: {fileID: 6113102894618846674, guid: 401d8319ff3bdc74d934f474065806cf, type: 3}
