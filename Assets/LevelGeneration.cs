@@ -11,6 +11,7 @@ public class LevelGeneration : MonoBehaviour
     private float[] samples;
     public float _maxScale;
     private float _barScale;
+    private int _sampleCount;
     private float _waveHeight;
     private float _barHeight;
     private bool _direction; // 1 if upwards, 0 if downwards
@@ -22,6 +23,7 @@ public class LevelGeneration : MonoBehaviour
         _waveHeight = 0;
         _barHeight = 0;
         _direction = true;
+        _sampleCount = -5;
         _updateCount = 0;
         _increment = 0.0000000001f;
         _barScale = 0.3f / (TransformAudio._samples.Length / 64);
@@ -48,9 +50,13 @@ public class LevelGeneration : MonoBehaviour
             {
                 samples[i] = samples[i + 1];
             }
+            if (_sampleCount > 5)
+            {
+                _sampleCount = -5;
+            }
             if (_waveHeight <= 0)
             {
-                _waveHeight = TransformAudio._samples[samples.Length / 2];
+                _waveHeight = TransformAudio._samples[samples.Length / 2 + _sampleCount];
                 _increment = 0.0000000001f;
             }
             if (_direction)
@@ -75,6 +81,7 @@ public class LevelGeneration : MonoBehaviour
                 }
             }
             samples[samples.Length - 1] = _barHeight;
+            _sampleCount++;
             for (int j = samples.Length - 1; j >= 0; j--)
             {
                 _sampleCube[j].transform.localScale = new Vector3(_barScale, (samples[j] * _maxScale), _barScale);
