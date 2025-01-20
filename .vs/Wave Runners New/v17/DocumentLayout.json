@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\levelgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\meshtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|c:\\users\\1970n\\wave runners new\\assets\\meshtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\meshtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,18 +50,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MeshTest.cs",
-              "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\MeshTest.cs",
-              "RelativeDocumentMoniker": "Assets\\MeshTest.cs",
-              "ToolTip": "C:\\Users\\1970n\\Wave Runners New\\Assets\\MeshTest.cs",
-              "RelativeToolTip": "Assets\\MeshTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T17:08:34.74Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "TransformAudio.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\TransformAudio.cs",
@@ -80,7 +68,7 @@
               "RelativeDocumentMoniker": "Assets\\LevelGeneration.cs",
               "ToolTip": "C:\\Users\\1970n\\Wave Runners New\\Assets\\LevelGeneration.cs",
               "RelativeToolTip": "Assets\\LevelGeneration.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBwAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAA8wDMAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-06T16:41:35.913Z",
               "EditorCaption": ""
@@ -96,6 +84,25 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-06T16:38:48.944Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MeshTest.cs",
+              "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\MeshTest.cs",
+              "RelativeDocumentMoniker": "Assets\\MeshTest.cs",
+              "ToolTip": "C:\\Users\\1970n\\Wave Runners New\\Assets\\MeshTest.cs",
+              "RelativeToolTip": "Assets\\MeshTest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T17:08:34.74Z",
+              "EditorCaption": ""
             }
           ]
         }
