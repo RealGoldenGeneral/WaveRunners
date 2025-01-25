@@ -22,31 +22,47 @@ public class LevelGeneration : MonoBehaviour
     {
         mesh.Clear();
         Vector3[] vertices = new Vector3[]
-       {
-            new Vector3 (0, 0, 0),
-            new Vector3 (0, 0, 1),
-            new Vector3 (1, 0, 0),
+        {
             new Vector3 (1, 0, 1),
-            new Vector3 (0, 1, 0),
+            new Vector3 (0, 0, 1),
+            new Vector3 (1, 1, 1),
             new Vector3 (0, 1, 1),
             new Vector3 (1, 1, 0),
-            new Vector3 (1, 1, 1)
-       };
+            new Vector3 (0, 1, 0),
+            new Vector3 (1, 0, 0),
+            new Vector3 (0, 0, 0),
+            new Vector3 (1, 1, 1),
+            new Vector3 (0, 1, 1),
+            new Vector3 (1, 1, 0),
+            new Vector3 (0, 1, 0),
+            new Vector3 (1, 0, 0),
+            new Vector3 (1, 0, 1),
+            new Vector3 (0, 0, 1),
+            new Vector3 (0, 0, 0),
+            new Vector3 (0, 0, 1),
+            new Vector3 (0, 1, 1),
+            new Vector3 (0, 1, 0),
+            new Vector3 (0, 0, 0),
+            new Vector3 (1, 0, 0),
+            new Vector3 (1, 1, 0),
+            new Vector3 (1, 1, 1),
+            new Vector3 (1, 0, 1),
+        };
 
         int[] triangles = new int[]
         {
-            0, 1, 2,
-            2, 1, 3,
-            0, 1, 5,
-            5, 4, 0,
-            0, 2, 6,
-            6, 4, 0,
-            1, 3, 7,
-            7, 5, 1,
-            2, 3, 7,
-            7, 6, 2,
-            4, 5, 6,
-            6, 5, 7
+            0, 2, 3,
+            0, 3, 1,
+            8, 4, 5,
+            8, 5, 9,
+            10, 6, 7,
+            10, 7, 11,
+            12, 13, 14,
+            12, 14, 15,
+            16, 17, 18,
+            16, 18, 19,
+            20, 21, 22,
+            20, 22, 23
         };
 
         mesh.vertices = vertices;
