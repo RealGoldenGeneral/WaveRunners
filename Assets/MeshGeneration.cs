@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeshGeneration : MonoBehaviour
 {
-    public static Mesh CreateBars()
+    public static Mesh CreateBars(float y)
     {
         Mesh mesh = new Mesh();
         mesh.Clear();
@@ -13,27 +13,27 @@ public class MeshGeneration : MonoBehaviour
             // Vertices 1-23, Inital cube
             new Vector3 (1, 0, 1), // 0
             new Vector3 (0, 0, 1), // 1
-            new Vector3 (1, 1, 1), // 2
-            new Vector3 (0, 1, 1), // 3
-            new Vector3 (1, 1, 0), // 4
-            new Vector3 (0, 1, 0), // 5
+            new Vector3 (1, y, 1), // 2
+            new Vector3 (0, y, 1), // 3
+            new Vector3 (1, y, 0), // 4
+            new Vector3 (0, y, 0), // 5
             new Vector3 (1, 0, 0), // 6
             new Vector3 (0, 0, 0), // 7
-            new Vector3 (1, 1, 1), // 8
-            new Vector3 (0, 1, 1), // 9
-            new Vector3 (1, 1, 0), // 10
-            new Vector3 (0, 1, 0), // 11
+            new Vector3 (1, y, 1), // 8
+            new Vector3 (0, y, 1), // 9
+            new Vector3 (1, y, 0), // 10
+            new Vector3 (0, y, 0), // 11
             new Vector3 (1, 0, 0), // 12
             new Vector3 (1, 0, 1), // 13
             new Vector3 (0, 0, 1), // 14
             new Vector3 (0, 0, 0), // 15
             new Vector3 (0, 0, 1), // 16
-            new Vector3 (0, 1, 1), // 17
-            new Vector3 (0, 1, 0), // 18
+            new Vector3 (0, y, 1), // 17
+            new Vector3 (0, y, 0), // 18
             new Vector3 (0, 0, 0), // 19
             new Vector3 (1, 0, 0), // 20
-            new Vector3 (1, 1, 0), // 21
-            new Vector3 (1, 1, 1), // 22
+            new Vector3 (1, y, 0), // 21
+            new Vector3 (1, y, 1), // 22
             new Vector3 (1, 0, 1), // 23
         };
 
@@ -60,10 +60,12 @@ public class MeshGeneration : MonoBehaviour
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 
+        mesh.name = "Bar Mesh";
+
         return mesh;
     }
 
-    public static Mesh CreateUpwardsSlope()
+    public static Mesh CreateUpwardsSlope(float y, float ymax)
     {
         Mesh mesh = new Mesh();
         mesh.Clear();
@@ -72,44 +74,44 @@ public class MeshGeneration : MonoBehaviour
             // Vertices 1-23, Inital cube
             new Vector3 (1, 0, 1), // 0
             new Vector3 (0, 0, 1), // 1
-            new Vector3 (1, 1, 1), // 2
-            new Vector3 (0, 1, 1), // 3
-            new Vector3 (1, 1, 0), // 4
-            new Vector3 (0, 1, 0), // 5
+            new Vector3 (1, y, 1), // 2
+            new Vector3 (0, y, 1), // 3
+            new Vector3 (1, y, 0), // 4
+            new Vector3 (0, y, 0), // 5
             new Vector3 (1, 0, 0), // 6
             new Vector3 (0, 0, 0), // 7
-            new Vector3 (1, 1, 1), // 8
-            new Vector3 (0, 1, 1), // 9
-            new Vector3 (1, 1, 0), // 10
-            new Vector3 (0, 1, 0), // 11
+            new Vector3 (1, y, 1), // 8
+            new Vector3 (0, y, 1), // 9
+            new Vector3 (1, y, 0), // 10
+            new Vector3 (0, y, 0), // 11
             new Vector3 (1, 0, 0), // 12
             new Vector3 (1, 0, 1), // 13
             new Vector3 (0, 0, 1), // 14
             new Vector3 (0, 0, 0), // 15
             new Vector3 (0, 0, 1), // 16
-            new Vector3 (0, 1, 1), // 17
-            new Vector3 (0, 1, 0), // 18
+            new Vector3 (0, y, 1), // 17
+            new Vector3 (0, y, 0), // 18
             new Vector3 (0, 0, 0), // 19
             new Vector3 (1, 0, 0), // 20
-            new Vector3 (1, 1, 0), // 21
-            new Vector3 (1, 1, 1), // 22
+            new Vector3 (1, y, 0), // 21
+            new Vector3 (1, y, 1), // 22
             new Vector3 (1, 0, 1), // 23
 
             // Vertices 24-37, upwards slope
-            new Vector3 (1, 1, 1), // 24
-            new Vector3 (1, 2, 1), // 25
-            new Vector3 (0, 1, 1), // 26
-            new Vector3 (1, 2, 0), // 27
-            new Vector3 (1, 1, 0), // 28
-            new Vector3 (0, 1, 0), // 29
-            new Vector3 (1, 1, 0), // 30
-            new Vector3 (1, 2, 0), // 31
-            new Vector3 (1, 2, 1), // 32
-            new Vector3 (1, 1, 1), // 33
-            new Vector3 (1, 2, 0), // 34
-            new Vector3 (0, 1, 0), // 35
-            new Vector3 (1, 2, 1), // 36
-            new Vector3 (0, 1, 1), // 37
+            new Vector3 (1, y, 1), // 24
+            new Vector3 (1, ymax, 1), // 25
+            new Vector3 (0, y, 1), // 26
+            new Vector3 (1, ymax, 0), // 27
+            new Vector3 (1, y, 0), // 28
+            new Vector3 (0, y, 0), // 29
+            new Vector3 (1, y, 0), // 30
+            new Vector3 (1, ymax, 0), // 31
+            new Vector3 (1, ymax, 1), // 32
+            new Vector3 (1, y, 1), // 33
+            new Vector3 (1, ymax, 0), // 34
+            new Vector3 (0, y, 0), // 35
+            new Vector3 (1, ymax, 1), // 36
+            new Vector3 (0, y, 1), // 37
         };
 
         int[] triangles = new int[]
@@ -143,10 +145,12 @@ public class MeshGeneration : MonoBehaviour
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
 
+        mesh.name = "Upwards Mesh";
+
         return mesh;
     }
 
-    public static Mesh CreateDownwardsSlope()
+    public static Mesh CreateDownwardsSlope(float y, float ymax)
     {
         Mesh mesh = new Mesh();
         mesh.Clear();
@@ -156,44 +160,44 @@ public class MeshGeneration : MonoBehaviour
             // Vertices 1-23, Inital cube
             new Vector3 (1, 0, 1), // 0
             new Vector3 (0, 0, 1), // 1
-            new Vector3 (1, 1, 1), // 2
-            new Vector3 (0, 1, 1), // 3
-            new Vector3 (1, 1, 0), // 4
-            new Vector3 (0, 1, 0), // 5
+            new Vector3 (1, y, 1), // 2
+            new Vector3 (0, y, 1), // 3
+            new Vector3 (1, y, 0), // 4
+            new Vector3 (0, y, 0), // 5
             new Vector3 (1, 0, 0), // 6
             new Vector3 (0, 0, 0), // 7
-            new Vector3 (1, 1, 1), // 8
-            new Vector3 (0, 1, 1), // 9
-            new Vector3 (1, 1, 0), // 10
-            new Vector3 (0, 1, 0), // 11
+            new Vector3 (1, y, 1), // 8
+            new Vector3 (0, y, 1), // 9
+            new Vector3 (1, y, 0), // 10
+            new Vector3 (0, y, 0), // 11
             new Vector3 (1, 0, 0), // 12
             new Vector3 (1, 0, 1), // 13
             new Vector3 (0, 0, 1), // 14
             new Vector3 (0, 0, 0), // 15
             new Vector3 (0, 0, 1), // 16
-            new Vector3 (0, 1, 1), // 17
-            new Vector3 (0, 1, 0), // 18
+            new Vector3 (0, y, 1), // 17
+            new Vector3 (0, y, 0), // 18
             new Vector3 (0, 0, 0), // 19
             new Vector3 (1, 0, 0), // 20
-            new Vector3 (1, 1, 0), // 21
-            new Vector3 (1, 1, 1), // 22
+            new Vector3 (1, y, 0), // 21
+            new Vector3 (1, y, 1), // 22
             new Vector3 (1, 0, 1), // 23
 
             // Vertices 24-37, downwards slope
-            new Vector3 (0, 1, 1), // 24
-            new Vector3 (0, 2, 1), // 25
-            new Vector3 (1, 1, 1), // 26
-            new Vector3 (0, 2, 0), // 27
-            new Vector3 (0, 1, 0), // 28
-            new Vector3 (1, 1, 0), // 29
-            new Vector3 (0, 1, 0), // 30
-            new Vector3 (0, 2, 0), // 31
-            new Vector3 (0, 2, 1), // 32
-            new Vector3 (0, 1, 1), // 33
-            new Vector3 (0, 2, 0), // 34
-            new Vector3 (1, 1, 0), // 35
-            new Vector3 (0, 2, 1), // 36
-            new Vector3 (1, 1, 1), // 37
+            new Vector3 (0, y, 1), // 24
+            new Vector3 (0, ymax, 1), // 25
+            new Vector3 (1, y, 1), // 26
+            new Vector3 (0, ymax, 0), // 27
+            new Vector3 (0, y, 0), // 28
+            new Vector3 (1, y, 0), // 29
+            new Vector3 (0, y, 0), // 30
+            new Vector3 (0, ymax, 0), // 31
+            new Vector3 (0, ymax, 1), // 32
+            new Vector3 (0, y, 1), // 33
+            new Vector3 (0, ymax, 0), // 34
+            new Vector3 (1, y, 0), // 35
+            new Vector3 (0, ymax, 1), // 36
+            new Vector3 (1, y, 1), // 37
         };
 
         int[] triangles = new int[]
@@ -227,6 +231,8 @@ public class MeshGeneration : MonoBehaviour
 
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();
+
+        mesh.name = "Downwards Mesh";
 
         return mesh;
     }

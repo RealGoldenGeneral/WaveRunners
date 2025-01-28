@@ -17,6 +17,7 @@ public class LevelGeneration : MonoBehaviour
     private float _increment;
     private int _updateCount;
     public Material _barMaterial;
+    private Mesh[] _meshes;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class LevelGeneration : MonoBehaviour
         _increment = 0.0000000001f;
         _barScale = 0.3f / (TransformAudio._samples.Length / 64);
         _bars = new GameObject[TransformAudio._samples.Length];
+        _meshes = new Mesh[TransformAudio._samples.Length];
         samples = new float[TransformAudio._samples.Length];
         for (int i = 0; i < TransformAudio._samples.Length; i++)
         {
@@ -43,7 +45,7 @@ public class LevelGeneration : MonoBehaviour
             GameObject _bar = new GameObject();
             _bar.AddComponent<MeshFilter>();
             _bar.AddComponent<MeshRenderer>();
-            Mesh _barMesh = MeshGeneration.CreateBars();
+            Mesh _barMesh = MeshGeneration.CreateBars(0);
             _bar.GetComponent<MeshFilter>().mesh = _barMesh;
             _bar.GetComponent<MeshRenderer>().material = _barMaterial;
             _bar.transform.position = this.transform.position;
@@ -52,6 +54,7 @@ public class LevelGeneration : MonoBehaviour
             this.transform.position = new Vector3(i * _barScale * -1, 0, 0);
             _bar.transform.position = new Vector3(9.9f, -4.5f, 0);
             _bars[i] = _bar;
+            _meshes[i] = _barMesh;
         }
     }
 
@@ -63,6 +66,8 @@ public class LevelGeneration : MonoBehaviour
             for (int i = 0; i < samples.Length - 1; i++)
             {
                 samples[i] = samples[i + 1];
+                _meshes[i] = _meshes[i + 1];
+                _bars[i].GetComponent<MeshFilter>().mesh = _meshes[i];
             }
             if (_sampleCount > 5)
             {
@@ -77,6 +82,8 @@ public class LevelGeneration : MonoBehaviour
             {
                 _barHeight += _increment;
                 _increment *= 2;
+                Mesh mesh = MeshGeneration.CreateUpwardsSlope(_barHeight, _barHeight + _increment);
+                _meshes[_meshes.Length - 1] = mesh;
                 if (_barHeight > _waveHeight)
                 {
                     _direction = false;
@@ -86,7 +93,9 @@ public class LevelGeneration : MonoBehaviour
             if (!_direction)
             {
                 _barHeight -= _increment;
+                Mesh mesh = MeshGeneration.CreateDownwardsSlope(_barHeight, _barHeight + _increment);
                 _increment *= 2;
+                _meshes[_meshes.Length - 1] = mesh;
                 if (_barHeight < 0)
                 {
                     _direction = true;
@@ -94,21 +103,10 @@ public class LevelGeneration : MonoBehaviour
                     _increment = 0.0000000001f;
                 }
             }
-            samples[samples.Length - 1] = _barHeight;
             _sampleCount++;
             for (int j = samples.Length - 1; j >= 0; j--)
             {
-                if (_direction)
-                {
-                    Mesh mesh = MeshGeneration.CreateUpwardsSlope();
-                    _bars[j].GetComponent<MeshFilter>().mesh = mesh;
-                }
-                else if (!_direction)
-                {
-                    Mesh mesh = MeshGeneration.CreateDownwardsSlope();
-                    _bars[j].GetComponent <MeshFilter>().mesh = mesh;
-                }
-                _bars[j].transform.localScale = new Vector3(_barScale, (samples[j] * _maxScale), _barScale);
+                _bars[j].transform.localScale = new Vector3(_barScale, _maxScale, _barScale);
             }
         }
         _updateCount++;
