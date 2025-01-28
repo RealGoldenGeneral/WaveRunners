@@ -23,14 +23,6 @@ public class TransformAudio : MonoBehaviour
 
     private void OnAudioFilterRead(float[] data, int channels)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        _audioSource.GetOutputData(temp, 0);
-
         for (int i = 0; i < temp.Length; i++)
         {
             _samples2[i] = new Complex(temp[i], 0);
@@ -40,7 +32,13 @@ public class TransformAudio : MonoBehaviour
 
         for (int j = 0; j < _samples2.Length; j++)
         {
-            _samples[j] = (float) _samples2[j].Real;
+            _samples[j] = (float)_samples2[j].Real;
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        _audioSource.GetOutputData(temp, 0);
     }
 }
