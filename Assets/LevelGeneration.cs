@@ -18,6 +18,7 @@ public class LevelGeneration : MonoBehaviour
     private int _updateCount;
     public Material _barMaterial;
     private Mesh[] _meshes;
+    private float[] _barHeights;
 
     // Start is called before the first frame update
     void Start()
@@ -28,10 +29,11 @@ public class LevelGeneration : MonoBehaviour
         _sampleCount = -5;
         _updateCount = 0;
         _increment = 0.0000000001f;
-        _barScale = 0.3f / (TransformAudio._samples.Length / 64);
+        _barScale = 1f / (TransformAudio._samples.Length / 64);
         _bars = new GameObject[TransformAudio._samples.Length];
         _meshes = new Mesh[TransformAudio._samples.Length];
         samples = new float[TransformAudio._samples.Length];
+        _barHeights =  new float[TransformAudio._samples.Length];
         for (int i = 0; i < TransformAudio._samples.Length; i++)
         {
             //GameObject _instanceSampleCube = (GameObject)Instantiate(_sampleCubePrefab);
@@ -52,7 +54,9 @@ public class LevelGeneration : MonoBehaviour
             _bar.transform.parent = this.transform;
             _bar.name = "Bar" + i;
             this.transform.position = new Vector3(i * _barScale * -1, 0, 0);
-            _bar.transform.position = new Vector3(9.9f, -4.5f, 0);
+            _bar.transform.position = new Vector3(15, -4.7f, 0);
+            _bar.AddComponent<MeshCollider>();
+            _bar.GetComponent<MeshCollider>().sharedMesh = _barMesh;
             _bars[i] = _bar;
             _meshes[i] = _barMesh;
         }
@@ -68,6 +72,8 @@ public class LevelGeneration : MonoBehaviour
                 samples[i] = samples[i + 1];
                 _meshes[i] = _meshes[i + 1];
                 _bars[i].GetComponent<MeshFilter>().mesh = _meshes[i];
+                _bars[i].GetComponent<MeshCollider>().sharedMesh = _meshes[i];
+                _barHeights[i] = _barHeights[i + 1];
             }
             if (_sampleCount > 5)
             {
@@ -103,10 +109,11 @@ public class LevelGeneration : MonoBehaviour
                     _increment = 0.0000000001f;
                 }
             }
+            _barHeights[_barHeights.Length - 1] = _barHeight;
             _sampleCount++;
             for (int j = samples.Length - 1; j >= 0; j--)
             {
-                _bars[j].transform.localScale = new Vector3(_barScale, _maxScale, _barScale);
+                _bars[j].transform.localScale = new Vector3(_barScale, _maxScale, 1);
             }
         }
         _updateCount++;
