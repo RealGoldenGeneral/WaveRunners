@@ -9,7 +9,7 @@ public class LevelGeneration : MonoBehaviour
     private GameObject[] _bars;
     private float[] samples;
     public float _maxScale;
-    private float _barScale;
+    public float _barScale;
     private int _sampleCount;
     private float _waveHeight;
     private float _barHeight;
@@ -29,7 +29,7 @@ public class LevelGeneration : MonoBehaviour
         _sampleCount = -5;
         _updateCount = 0;
         _increment = 0.0000000001f;
-        _barScale = 1f / (TransformAudio._samples.Length / 64);
+        _barScale /= (TransformAudio._samples.Length / 64);
         _bars = new GameObject[TransformAudio._samples.Length];
         _meshes = new Mesh[TransformAudio._samples.Length];
         samples = new float[TransformAudio._samples.Length];

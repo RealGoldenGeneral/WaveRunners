@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 138863890}
   - component: {fileID: 138863889}
   - component: {fileID: 138863893}
+  - component: {fileID: 138863894}
   m_Layer: 0
   m_Name: PlayerTest
   m_TagString: Untagged
@@ -222,8 +223,8 @@ Transform:
   m_GameObject: {fileID: 138863888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.25}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -254,7 +255,20 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 48
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
+--- !u!114 &138863894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138863888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e06ca932b2faa498562fdd54f74ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 138863888}
 --- !u!1 &218514786
 GameObject:
   m_ObjectHideFlags: 0
@@ -300,7 +314,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sampleCubePrefab: {fileID: 6113102894618846674, guid: 401d8319ff3bdc74d934f474065806cf, type: 3}
-  _maxScale: 2.5
+  _maxScale: 2
+  _barScale: 0.8
   _barMaterial: {fileID: 2100000, guid: e7ee56c3c5b54c142b0b3414a338aced, type: 2}
 --- !u!1 &705507993
 GameObject:

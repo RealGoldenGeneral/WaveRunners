@@ -381,6 +381,7 @@
 "Assets/Packages/StandaloneFileBrowser/StandaloneFileBrowserLinux.cs"
 "Assets/Packages/StandaloneFileBrowser/StandaloneFileBrowserMac.cs"
 "Assets/Packages/StandaloneFileBrowser/StandaloneFileBrowserWindows.cs"
+"Assets/PlayerControls.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs"
