@@ -54,7 +54,7 @@ public class LevelGeneration : MonoBehaviour
             _bar.transform.parent = this.transform;
             _bar.name = "Bar" + i;
             this.transform.position = new Vector3(i * _barScale * -1, 0, 0);
-            _bar.transform.position = new Vector3(15, -4.7f, 0);
+            _bar.transform.position = new Vector3(17, -4.7f, 0);
             _bar.AddComponent<MeshCollider>();
             _bar.GetComponent<MeshCollider>().sharedMesh = _barMesh;
             _bars[i] = _bar;
