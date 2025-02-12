@@ -9,12 +9,11 @@ public class PlayerControls : MonoBehaviour
     [SerializeField]
     public GameObject player;
     private Rigidbody rb;
-    private bool jumped;
+    private bool jumped = false;
     // Start is called before the first frame update
     void Start()
     {
         rb = player.GetComponent<Rigidbody>();
-        jumped = false;
     }
 
     // Update is called once per frame
@@ -33,27 +32,27 @@ public class PlayerControls : MonoBehaviour
         }
 
         // Jump
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !jumped)
         {
             rb.AddForce(Vector3.up * 400);
             jumped = true;
         }
 
         // Rotate Forwards
-        if (Input.GetKey(KeyCode.A) && jumped == true)
+        if (Input.GetKey(KeyCode.D) && jumped)
         {
             player.transform.Rotate(Vector3.forward * 180 * Time.deltaTime);
         }
         
         // Rotate Backwards
-        if (Input.GetKey(KeyCode.D) && jumped == true)
+        if (Input.GetKey(KeyCode.A) && jumped)
         {
             player.transform.Rotate(Vector3.back * 180 * Time.deltaTime);
         }
+    }
 
-        if (player.transform.position.y < -4.199f)
-        {
-            jumped = !jumped;
-        }
+    private void OnCollisionEnter(Collision collision)
+    {
+        jumped = false;
     }
 }
