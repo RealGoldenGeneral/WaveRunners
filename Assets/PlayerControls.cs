@@ -45,13 +45,21 @@ public class PlayerControls : MonoBehaviour
         // Rotate Forwards
         if (Input.GetKey(KeyCode.D) && jumped)
         {
-            player.transform.Rotate(Vector3.forward * 180 * Time.deltaTime);
+            player.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
+            if (player.transform.eulerAngles.z > 359)
+            {
+                flips++;
+            }
         }
         
         // Rotate Backwards
         if (Input.GetKey(KeyCode.A) && jumped)
         {
-            player.transform.Rotate(Vector3.back * 180 * Time.deltaTime);
+            player.transform.Rotate(Vector3.back * 360 * Time.deltaTime);
+            if (player.transform.eulerAngles.z > 359)
+            {
+                flips++;
+            }
         }
     }
 
@@ -61,5 +69,7 @@ public class PlayerControls : MonoBehaviour
         {
             jumped = false;
         }
+        rb.velocity = rb.velocity + new Vector3(flips * 5, 0, 0);
+        flips = 0;
     }
 }
