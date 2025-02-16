@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
@@ -9,10 +10,12 @@ public class PlayerControls : MonoBehaviour
     [SerializeField]
     public GameObject player;
     private Rigidbody rb;
+    private int flips;
     private bool jumped = false;
     // Start is called before the first frame update
     void Start()
     {
+        flips = 0;
         rb = player.GetComponent<Rigidbody>();
     }
 
@@ -20,7 +23,7 @@ public class PlayerControls : MonoBehaviour
     void Update()
     {
         // Accelerate
-        if (Input.GetKey(KeyCode.W) && rb.velocity.x < 15)
+        if (Input.GetKey(KeyCode.W) && rb.velocity.x < 5)
         {
             rb.AddForce(Vector3.right, ForceMode.Acceleration);
         }
@@ -34,6 +37,7 @@ public class PlayerControls : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && !jumped)
         {
+            player.transform.position = player.transform.position + new Vector3(0, 0.05f, 0);
             rb.AddForce(Vector3.up * 400);
             jumped = true;
         }
@@ -53,6 +57,9 @@ public class PlayerControls : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        jumped = false;
+        if (jumped)
+        {
+            jumped = false;
+        }
     }
 }
