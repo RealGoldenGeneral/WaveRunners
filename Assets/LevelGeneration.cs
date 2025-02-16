@@ -6,6 +6,7 @@ using UnityEngine;
 public class LevelGeneration : MonoBehaviour
 {
     public GameObject _sampleCubePrefab;
+    private int _levelLength;
     private GameObject[] _bars;
     private float[] samples;
     public float _maxScale;
@@ -28,13 +29,14 @@ public class LevelGeneration : MonoBehaviour
         _direction = true;
         _sampleCount = -5;
         _updateCount = 0;
+        _levelLength = TransformAudio._samples.Length * 4;
         _increment = 0.0000000001f;
         _barScale /= (TransformAudio._samples.Length / 64);
-        _bars = new GameObject[TransformAudio._samples.Length];
-        _meshes = new Mesh[TransformAudio._samples.Length];
-        samples = new float[TransformAudio._samples.Length];
-        _barHeights =  new float[TransformAudio._samples.Length];
-        for (int i = 0; i < TransformAudio._samples.Length; i++)
+        _bars = new GameObject[_levelLength];
+        _meshes = new Mesh[_levelLength];
+        samples = new float[_levelLength];
+        _barHeights =  new float[_levelLength];
+        for (int i = 0; i < _levelLength; i++)
         {
             //GameObject _instanceSampleCube = (GameObject)Instantiate(_sampleCubePrefab);
             //_instanceSampleCube.transform.position = this.transform.position;
@@ -54,7 +56,7 @@ public class LevelGeneration : MonoBehaviour
             _bar.transform.parent = this.transform;
             _bar.name = "Bar" + i;
             this.transform.position = new Vector3(i * _barScale * -1, 0, 0);
-            _bar.transform.position = new Vector3(17, -4.7f, 0);
+            _bar.transform.position = new Vector3(_levelLength / 2 * _barScale, -4.7f, 0);
             _bar.AddComponent<MeshCollider>();
             _bar.GetComponent<MeshCollider>().sharedMesh = _barMesh;
             _bars[i] = _bar;
@@ -81,7 +83,7 @@ public class LevelGeneration : MonoBehaviour
             }
             if (_waveHeight <= 0)
             {
-                _waveHeight = TransformAudio._samples[samples.Length / 2 + _sampleCount];
+                _waveHeight = TransformAudio._samples[TransformAudio._samples.Length / 2 + _sampleCount];
                 _increment = 0.0000000001f;
             }
             if (_direction)
