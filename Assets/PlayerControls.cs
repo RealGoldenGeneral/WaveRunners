@@ -69,7 +69,10 @@ public class PlayerControls : MonoBehaviour
         {
             jumped = false;
         }
-        rb.velocity = rb.velocity + new Vector3(flips * 5, 0, 0);
+        if (player.transform.eulerAngles.y > 355 || player.transform.eulerAngles.y < 5)
+        {
+            rb.velocity = rb.velocity + new Vector3(flips * 5, 0, 0);
+        }
         flips = 0;
     }
 }
