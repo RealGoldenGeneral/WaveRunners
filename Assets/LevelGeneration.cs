@@ -29,7 +29,7 @@ public class LevelGeneration : MonoBehaviour
         _direction = true;
         _sampleCount = -5;
         _updateCount = 0;
-        _levelLength = TransformAudio._samples.Length * 4;
+        _levelLength = TransformAudio._samples.Length;
         _increment = 0.0000000001f;
         _barScale /= (TransformAudio._samples.Length / 64);
         _bars = new GameObject[_levelLength];
