@@ -18,6 +18,7 @@ public class LevelGeneration : MonoBehaviour
     private float _increment;
     private int _updateCount;
     public Material _barMaterial;
+    public Material _invisibleWallMaterial;
     private Mesh[] _meshes;
     private float[] _barHeights;
 
@@ -36,6 +37,7 @@ public class LevelGeneration : MonoBehaviour
         _meshes = new Mesh[_levelLength];
         samples = new float[_levelLength];
         _barHeights =  new float[_levelLength];
+        int waveLayer = LayerMask.NameToLayer("Waves");
         for (int i = 0; i < _levelLength; i++)
         {
             //GameObject _instanceSampleCube = (GameObject)Instantiate(_sampleCubePrefab);
@@ -55,6 +57,7 @@ public class LevelGeneration : MonoBehaviour
             _bar.transform.position = this.transform.position;
             _bar.transform.parent = this.transform;
             _bar.name = "Bar" + i;
+            _bar.layer = waveLayer;
             this.transform.position = new Vector3(i * _barScale * -1, 0, 0);
             _bar.transform.position = new Vector3(_levelLength / 2 * _barScale, -4, 0);
             _bar.AddComponent<MeshCollider>();
@@ -67,7 +70,7 @@ public class LevelGeneration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_updateCount % 10 == 0)
+        if (_updateCount % 15 == 0)
         {
             for (int i = 0; i < samples.Length - 1; i++)
             {

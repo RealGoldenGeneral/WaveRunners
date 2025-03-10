@@ -25,7 +25,7 @@ public class CameraSideScrolling : MonoBehaviour
         gameCamera.transform.position = new Vector3(player.transform.position.x, gameCamera.transform.position.y, gameCamera.transform.position.z);
         if (player.GetComponent<Rigidbody>().velocity.x > ai.GetComponent<Rigidbody>().velocity.x && player.transform.position.x > ai.transform.position.x)
         {
-            ai.transform.position = ai.transform.position + new Vector3((player.transform.position.x - lastPosition.x) * 0.75f, 0, 0);
+            ai.transform.position = ai.transform.position + new Vector3((player.transform.position.x - lastPosition.x) * 0.25f, 0, 0);
         }
         if (player.GetComponent<Rigidbody>().velocity.x < 1)
         {
