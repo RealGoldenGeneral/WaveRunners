@@ -28,9 +28,8 @@ public class AIBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         RaycastHit hit;
-        LayerMask mask = LayerMask.GetMask("Collide Only With Water");
 
-        if (Physics.Raycast(AIPlayer.transform.position, Vector3.right, out hit, ~mask))
+        if (Physics.Raycast(AIPlayer.transform.position, Vector3.right, out hit))
         {
             if (hit.distance < 1 && !jumped)
             {
@@ -40,7 +39,7 @@ public class AIBehaviour : MonoBehaviour
             }
         }
 
-        if (Physics.Raycast(AIPlayer.transform.position, Vector3.down, out hit, ~mask))
+        if (Physics.Raycast(AIPlayer.transform.position, Vector3.down, out hit))
         {
             if (hit.distance > 1 && jumped)
             {
