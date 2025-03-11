@@ -365,6 +365,7 @@
 "Assets/AIBehaviour.cs"
 "Assets/CameraSideScrolling.cs"
 "Assets/FastFourierTransform.cs"
+"Assets/GameState.cs"
 "Assets/InsertAudio.cs"
 "Assets/Instantiate512Squares.cs"
 "Assets/LevelGeneration.cs"

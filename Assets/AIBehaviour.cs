@@ -50,6 +50,13 @@ public class AIBehaviour : MonoBehaviour
                     flips++;
                 }
             }
+            else
+            {
+                if (AIPlayer.transform.eulerAngles.z < 359 && hit.distance > 0 && jumped)
+                {
+                    AIPlayer.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
+                }
+            }
         }
     }
 
@@ -63,6 +70,7 @@ public class AIBehaviour : MonoBehaviour
         {
             body.velocity = body.velocity + new Vector3(flips * 5, 0, 0);
         }
+        AIPlayer.transform.eulerAngles = new Vector3(0, 0, 0);
         flips = 0;
     }
 }

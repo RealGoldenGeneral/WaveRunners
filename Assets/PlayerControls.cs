@@ -73,6 +73,7 @@ public class PlayerControls : MonoBehaviour
         {
             rb.velocity = rb.velocity + new Vector3(flips * 5, 0, 0);
         }
+        player.transform.eulerAngles = new Vector3(0, 0, 0);
         flips = 0;
     }
 }

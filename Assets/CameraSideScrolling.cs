@@ -16,7 +16,7 @@ public class CameraSideScrolling : MonoBehaviour
         gameCamera = GameObject.Find("Main Camera");
         player = GameObject.Find("PlayerTest");
         levelGenerator = GameObject.Find("Level Generator");
-        ai = GameObject.Find("AI Player");
+        ai = GameObject.Find("AI Player 1");
     }
 
     // Update is called once per frame
