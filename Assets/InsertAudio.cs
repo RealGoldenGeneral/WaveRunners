@@ -11,7 +11,9 @@ public class InsertAudio : MonoBehaviour
     public GameObject gameManager;
     public AudioSource audioSource;
     public GameObject player;
-    public GameObject AI;
+    public GameObject AI1;
+    public GameObject AI2;
+    public GameObject AI3;
     public Button button;
 
     public void OnPointerDown(PointerEventData eventData) { }
@@ -36,7 +38,9 @@ public class InsertAudio : MonoBehaviour
         audioClip = DownloadHandlerAudioClip.GetContent(loader);
         gameManager.SetActive(true);
         player.SetActive(true);
-        AI.SetActive(true);
+        AI1.SetActive(true);
+        AI2.SetActive(true);
+        AI3.SetActive(true);
         audioSource.clip = audioClip;
         button.gameObject.SetActive(false);
         audioSource.Play();

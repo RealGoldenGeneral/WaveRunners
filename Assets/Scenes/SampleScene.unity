@@ -294,7 +294,9 @@ MonoBehaviour:
   gameManager: {fileID: 1865997357}
   audioSource: {fileID: 1865997361}
   player: {fileID: 2086125953}
-  AI: {fileID: 2030764410}
+  AI1: {fileID: 2030764410}
+  AI2: {fileID: 780143918}
+  AI3: {fileID: 1292985427}
   button: {fileID: 305579775}
 --- !u!114 &305579775
 MonoBehaviour:
@@ -1520,6 +1522,7 @@ GameObject:
   - component: {fileID: 1865997359}
   - component: {fileID: 1865997361}
   - component: {fileID: 1865997360}
+  - component: {fileID: 1865997362}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1667,6 +1670,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1865997362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865997357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802a499b3dbba6d4f974c87dd3dc25dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2086125953}
+  AI1: {fileID: 2030764410}
+  AI2: {fileID: 780143918}
+  AI3: {fileID: 1292985427}
 --- !u!1 &1924269381
 GameObject:
   m_ObjectHideFlags: 0

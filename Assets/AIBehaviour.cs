@@ -19,7 +19,7 @@ public class AIBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (body.velocity.x < 5)
+        if (body.velocity.x < Random.Range(4, 5))
         {
             body.AddForce(Vector3.right, ForceMode.Acceleration);
         }
@@ -32,7 +32,7 @@ public class AIBehaviour : MonoBehaviour
 
         if (Physics.Raycast(AIPlayer.transform.position, Vector3.right, out hit, mask))
         {
-            if (hit.distance < 1 && !jumped)
+            if (hit.distance < Random.Range(0.5f, 1.5f) && !jumped)
             {
                 AIPlayer.transform.position = AIPlayer.transform.position + new Vector3(0, 0.05f, 0);
                 body.AddForce(Vector3.up * 400);
@@ -42,7 +42,7 @@ public class AIBehaviour : MonoBehaviour
 
         if (Physics.Raycast(AIPlayer.transform.position, Vector3.down, out hit, mask))
         {
-            if (hit.distance > 1 && jumped)
+            if (hit.distance > Random.Range(0.5f, 1.5f) && jumped)
             {
                 AIPlayer.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
                 if (AIPlayer.transform.eulerAngles.z > 359)
