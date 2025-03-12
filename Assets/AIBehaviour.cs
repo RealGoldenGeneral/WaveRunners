@@ -19,9 +19,12 @@ public class AIBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (body.velocity.x < Random.Range(4, 5))
+        if (GameState.hasStarted)
         {
-            body.AddForce(Vector3.right, ForceMode.Acceleration);
+            if (body.velocity.x < Random.Range(4, 5))
+            {
+                body.AddForce(Vector3.right, ForceMode.Acceleration);
+            }
         }
     }
 
@@ -30,31 +33,34 @@ public class AIBehaviour : MonoBehaviour
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Waves");
 
-        if (Physics.Raycast(AIPlayer.transform.position, Vector3.right, out hit, mask))
+        if (GameState.hasStarted)
         {
-            if (hit.distance < Random.Range(0.5f, 1.5f) && !jumped)
+            if (Physics.Raycast(AIPlayer.transform.position, Vector3.right, out hit, mask))
             {
-                AIPlayer.transform.position = AIPlayer.transform.position + new Vector3(0, 0.05f, 0);
-                body.AddForce(Vector3.up * 400);
-                jumped = true;
-            }
-        }
-
-        if (Physics.Raycast(AIPlayer.transform.position, Vector3.down, out hit, mask))
-        {
-            if (hit.distance > Random.Range(0.5f, 1.5f) && jumped)
-            {
-                AIPlayer.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
-                if (AIPlayer.transform.eulerAngles.z > 359)
+                if (hit.distance < Random.Range(0.5f, 1.5f) && !jumped)
                 {
-                    flips++;
+                    AIPlayer.transform.position = AIPlayer.transform.position + new Vector3(0, 0.05f, 0);
+                    body.AddForce(Vector3.up * 400);
+                    jumped = true;
                 }
             }
-            else
+
+            if (Physics.Raycast(AIPlayer.transform.position, Vector3.down, out hit, mask))
             {
-                if (AIPlayer.transform.eulerAngles.z < 359 && hit.distance > 0 && jumped)
+                if (hit.distance > Random.Range(0.5f, 1.5f) && jumped)
                 {
                     AIPlayer.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
+                    if (AIPlayer.transform.eulerAngles.z > 359)
+                    {
+                        flips++;
+                    }
+                }
+                else
+                {
+                    if (AIPlayer.transform.eulerAngles.z < 359 && hit.distance > 0 && jumped)
+                    {
+                        AIPlayer.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
+                    }
                 }
             }
         }
@@ -62,15 +68,18 @@ public class AIBehaviour : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (jumped)
+        if (GameState.hasStarted)
         {
-            jumped = false;
+            if (jumped)
+            {
+                jumped = false;
+            }
+            if (AIPlayer.transform.eulerAngles.y > 355 || AIPlayer.transform.eulerAngles.y < 5)
+            {
+                body.velocity = body.velocity + new Vector3(flips * 5, 0, 0);
+            }
+            AIPlayer.transform.eulerAngles = new Vector3(0, 0, 0);
+            flips = 0;
         }
-        if (AIPlayer.transform.eulerAngles.y > 355 || AIPlayer.transform.eulerAngles.y < 5)
-        {
-            body.velocity = body.velocity + new Vector3(flips * 5, 0, 0);
-        }
-        AIPlayer.transform.eulerAngles = new Vector3(0, 0, 0);
-        flips = 0;
     }
 }

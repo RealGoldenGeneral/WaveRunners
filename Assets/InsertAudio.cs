@@ -48,6 +48,5 @@ public class InsertAudio : MonoBehaviour
         button.gameObject.SetActive(false);
         positionText.SetActive(true);
         countdownText.SetActive(true);
-        audioSource.Play();
     }
 }

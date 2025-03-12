@@ -36,15 +36,19 @@ public class CountdownText : MonoBehaviour
         await Task.Delay(100);
 
         this.gameObject.SetActive(false);
+        GameState.StartGame();
+        audioSource.Play();
+    }
+
+    public void DeclareWinner()
+    {
+        m_Text.text = $"{GameState.positions[0].name} Wins!";
+        GameState.EndGame();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!audioSource.isPlaying)
-        {
-            this.gameObject.SetActive(true);
-            m_Text.text = $"{GameState.positions[0].name} Wins!";
-        }
+        
     }
 }
