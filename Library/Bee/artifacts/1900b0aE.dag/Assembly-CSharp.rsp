@@ -372,6 +372,7 @@
 "Assets/MeshGeneration.cs"
 "Assets/MeshTest.cs"
 "Assets/PlayerControls.cs"
+"Assets/PositionText.cs"
 "Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs"
 "Assets/StandaloneFileBrowser/Sample/BasicSample.cs"
 "Assets/StandaloneFileBrowser/Sample/CanvasSampleOpenFileImage.cs"

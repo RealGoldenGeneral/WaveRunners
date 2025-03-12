@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading;
 using SFB;
 using UnityEngine.Networking;
 using UnityEngine.EventSystems;
@@ -15,6 +16,8 @@ public class InsertAudio : MonoBehaviour
     public GameObject AI2;
     public GameObject AI3;
     public Button button;
+    public GameObject positionText;
+    public GameObject countdownText;
 
     public void OnPointerDown(PointerEventData eventData) { }
     private void Start()
@@ -43,6 +46,8 @@ public class InsertAudio : MonoBehaviour
         AI3.SetActive(true);
         audioSource.clip = audioClip;
         button.gameObject.SetActive(false);
+        positionText.SetActive(true);
+        countdownText.SetActive(true);
         audioSource.Play();
     }
 }
