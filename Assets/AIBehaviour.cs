@@ -19,6 +19,7 @@ public class AIBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // AI moves constantly
         if (GameState.hasStarted)
         {
             if (body.velocity.x < Random.Range(4, 5))
@@ -35,6 +36,7 @@ public class AIBehaviour : MonoBehaviour
 
         if (GameState.hasStarted)
         {
+            // AI jumps when it detects a wave
             if (Physics.Raycast(AIPlayer.transform.position, Vector3.right, out hit, mask))
             {
                 if (hit.distance < Random.Range(0.5f, 1.5f) && !jumped)
@@ -45,6 +47,7 @@ public class AIBehaviour : MonoBehaviour
                 }
             }
 
+            // AI flips when it is in the air
             if (Physics.Raycast(AIPlayer.transform.position, Vector3.down, out hit, mask))
             {
                 if (hit.distance > Random.Range(0.5f, 1.5f) && jumped)
@@ -55,6 +58,8 @@ public class AIBehaviour : MonoBehaviour
                         flips++;
                     }
                 }
+
+                // Rotation correction for AI
                 else
                 {
                     if (AIPlayer.transform.eulerAngles.z < 359 && hit.distance > 0 && jumped)
@@ -70,14 +75,19 @@ public class AIBehaviour : MonoBehaviour
     {
         if (GameState.hasStarted)
         {
+            // Anti-double jump
             if (jumped)
             {
                 jumped = false;
             }
+
+            // Boost mechanic on collision
             if (AIPlayer.transform.eulerAngles.y > 355 || AIPlayer.transform.eulerAngles.y < 5)
             {
                 body.velocity = body.velocity + new Vector3(flips * 5, 0, 0);
             }
+
+            // Reset rotation and boost
             AIPlayer.transform.eulerAngles = new Vector3(0, 0, 0);
             flips = 0;
         }

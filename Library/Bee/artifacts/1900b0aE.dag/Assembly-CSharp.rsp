@@ -371,7 +371,6 @@
 "Assets/Instantiate512Squares.cs"
 "Assets/LevelGeneration.cs"
 "Assets/MeshGeneration.cs"
-"Assets/MeshTest.cs"
 "Assets/PlayerControls.cs"
 "Assets/PositionText.cs"
 "Assets/StandaloneFileBrowser/IStandaloneFileBrowser.cs"

@@ -16,6 +16,7 @@ public class GameState : MonoBehaviour
     public static GameObject[] positions;
     public static bool hasStarted;
 
+    // Comparison function for sorting the positions of the racers.
     public static int CompareRacers(GameObject p1, GameObject p2)
     {
         if (p1.transform.position.x > p2.transform.position.x) return -1;
@@ -23,11 +24,13 @@ public class GameState : MonoBehaviour
         else return 1;
     }
 
+    // Activates AI, player movement, and level generation.
     public static void StartGame()
     {
         hasStarted = true;
     }
 
+    // Deactivates AI and player movement and restarts the scene.
     public async static void EndGame()
     {
         hasStarted = false;
@@ -52,7 +55,10 @@ public class GameState : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Update positions of racers.
         Array.Sort(positions, CompareRacers);
+
+        // End game after audio has been played.
         if (!audioSource.isPlaying && hasStarted)
         {
             countdown.SetActive(true);

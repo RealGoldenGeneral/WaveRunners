@@ -27,6 +27,7 @@ public class InsertAudio : MonoBehaviour
     }
     private void onClick()
     {
+        // Opens file explorer for audio file (only mpeg for now)
         var paths = StandaloneFileBrowser.OpenFilePanel("Select Audio", "", "mp3", false);
         if (paths.Length > 0)
         {
@@ -36,6 +37,7 @@ public class InsertAudio : MonoBehaviour
 
     private IEnumerator OutputRoutine(string url)
     {
+        // Loads audio from file and starts game (only takes mpeg for now)
         var loader = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
         yield return loader.SendWebRequest();
         audioClip = DownloadHandlerAudioClip.GetContent(loader);

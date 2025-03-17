@@ -25,6 +25,7 @@ public class LevelGeneration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Set all values to start generation
         _waveHeight = 0;
         _barHeight = 0;
         _direction = true;
@@ -38,6 +39,8 @@ public class LevelGeneration : MonoBehaviour
         samples = new float[_levelLength];
         _barHeights =  new float[_levelLength];
         int waveLayer = LayerMask.NameToLayer("Waves");
+
+        // Generate 512 bars, representing the heights of the waves
         for (int i = 0; i < _levelLength; i++)
         {
             //GameObject _instanceSampleCube = (GameObject)Instantiate(_sampleCubePrefab);
@@ -72,6 +75,7 @@ public class LevelGeneration : MonoBehaviour
     {
         if (_updateCount % 15 == 0)
         {
+            // Iteratively update every bar forward
             for (int i = 0; i < samples.Length - 1; i++)
             {
                 samples[i] = samples[i + 1];
@@ -80,33 +84,49 @@ public class LevelGeneration : MonoBehaviour
                 _bars[i].GetComponent<MeshCollider>().sharedMesh = _meshes[i];
                 _barHeights[i] = _barHeights[i + 1];
             }
+
+            // Randomness value reset
             if (_sampleCount > 5)
             {
                 _sampleCount = -5;
             }
+
+            // Get new wave height and reset increment
             if (_waveHeight <= 0)
             {
                 _waveHeight = TransformAudio._samples[TransformAudio._samples.Length / 2 + _sampleCount];
                 _increment = 0.0000000001f;
             }
+
+            // Increment bar height and double increment
             if (_direction)
             {
                 _barHeight += _increment;
                 _increment *= 2;
+
+                // Apply new mesh
                 Mesh mesh = MeshGeneration.CreateUpwardsSlope(_barHeight, _barHeight + _increment);
                 _meshes[_meshes.Length - 1] = mesh;
+
+                // Direction switch and increment reset
                 if (_barHeight > _waveHeight)
                 {
                     _direction = false;
                     _increment = 0.0000000001f;
                 }
             }
+
+            // Decrements bar height and double decrement
             if (!_direction)
             {
                 _barHeight -= _increment;
-                Mesh mesh = MeshGeneration.CreateDownwardsSlope(_barHeight, _barHeight + _increment);
                 _increment *= 2;
+
+                // Apply new mesh
+                Mesh mesh = MeshGeneration.CreateDownwardsSlope(_barHeight, _barHeight + _increment);
                 _meshes[_meshes.Length - 1] = mesh;
+
+                // Direction switch and decrement reset
                 if (_barHeight < 0)
                 {
                     _direction = true;
@@ -116,6 +136,8 @@ public class LevelGeneration : MonoBehaviour
             }
             _barHeights[_barHeights.Length - 1] = _barHeight;
             _sampleCount++;
+
+            // Transform scale of all bars
             for (int j = samples.Length - 1; j >= 0; j--)
             {
                 _bars[j].transform.localScale = new Vector3(_barScale, _maxScale, 1);

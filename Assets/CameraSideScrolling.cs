@@ -26,6 +26,8 @@ public class CameraSideScrolling : MonoBehaviour
     {
         gameCamera.transform.position = new Vector3(player.transform.position.x, gameCamera.transform.position.y, gameCamera.transform.position.z);
         levelGenerator.transform.position += new Vector3(GameState.positions[0].transform.position.x - lastPositions[0].x, 0, 0);
+
+        // Update last positions from first to last
         for (int i = 0; i < lastPositions.Length; i++)
         {
             lastPositions[i] = GameState.positions[i].transform.position;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MeshGeneration : MonoBehaviour
 {
+    // Bars before wave generation
     public static Mesh CreateBars(float y)
     {
         Mesh mesh = new Mesh();
@@ -65,6 +66,7 @@ public class MeshGeneration : MonoBehaviour
         return mesh;
     }
 
+    // Upwards slope
     public static Mesh CreateUpwardsSlope(float y, float ymax)
     {
         Mesh mesh = new Mesh();
@@ -150,6 +152,8 @@ public class MeshGeneration : MonoBehaviour
         return mesh;
     }
 
+
+    // Downwards Slope
     public static Mesh CreateDownwardsSlope(float y, float ymax)
     {
         Mesh mesh = new Mesh();

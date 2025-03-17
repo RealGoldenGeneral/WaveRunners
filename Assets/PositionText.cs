@@ -16,6 +16,7 @@ public class PositionText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Update player position
         for (int i = 0; i < GameState.positions.Length; i++)
         {
             if (GameState.positions[i].name == "PlayerTest")

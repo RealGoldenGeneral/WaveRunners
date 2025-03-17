@@ -71,14 +71,19 @@ public class PlayerControls : MonoBehaviour
     {
         if (GameState.hasStarted)
         {
+            // Anti double jump
             if (jumped)
             {
                 jumped = false;
             }
+
+            // Boost mechanic
             if (player.transform.eulerAngles.y > 355 || player.transform.eulerAngles.y < 5)
             {
                 rb.velocity = rb.velocity + new Vector3(flips * 5, 0, 0);
             }
+
+            // Reset orientation and flips
             player.transform.eulerAngles = new Vector3(0, 0, 0);
             flips = 0;
         }

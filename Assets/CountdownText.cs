@@ -17,6 +17,7 @@ public class CountdownText : MonoBehaviour
         Countdown();
     }
 
+    // Start a countdown.
     public async void Countdown()
     {
         m_Text.text = "3";
@@ -40,6 +41,7 @@ public class CountdownText : MonoBehaviour
         audioSource.Play();
     }
 
+    // Declare a winner
     public void DeclareWinner()
     {
         m_Text.text = $"{GameState.positions[0].name} Wins!";
