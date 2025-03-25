@@ -8,12 +8,14 @@ public class AIBehaviour : MonoBehaviour
     Rigidbody body;
     bool jumped;
     int flips;
+    bool flippedOnce;
     // Start is called before the first frame update
     void Start()
     {
         flips = 0;
         body = AIPlayer.GetComponent<Rigidbody>();
         jumped = false;
+        flippedOnce = false;
     }
 
     // Update is called once per frame
@@ -53,9 +55,14 @@ public class AIBehaviour : MonoBehaviour
                 if (hit.distance > Random.Range(0.5f, 1.5f) && jumped)
                 {
                     AIPlayer.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
-                    if (AIPlayer.transform.eulerAngles.z > 359)
+                    if (AIPlayer.transform.eulerAngles.z > 359 && !flippedOnce)
                     {
                         flips++;
+                        flippedOnce = false;
+                    }
+                    if (AIPlayer.transform.eulerAngles.z < 1 && flippedOnce)
+                    {
+                        flippedOnce = true;
                     }
                 }
 
@@ -82,7 +89,7 @@ public class AIBehaviour : MonoBehaviour
             }
 
             // Boost mechanic on collision
-            if (AIPlayer.transform.eulerAngles.y > 355 || AIPlayer.transform.eulerAngles.y < 5)
+            if (AIPlayer.transform.eulerAngles.z > 355 || AIPlayer.transform.eulerAngles.z < 5)
             {
                 body.velocity = body.velocity + new Vector3(flips * 5, 0, 0);
             }
@@ -90,6 +97,7 @@ public class AIBehaviour : MonoBehaviour
             // Reset rotation and boost
             AIPlayer.transform.eulerAngles = new Vector3(0, 0, 0);
             flips = 0;
+            flippedOnce = false;
         }
     }
 }
