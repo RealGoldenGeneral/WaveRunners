@@ -50,6 +50,12 @@ public class GameState : MonoBehaviour
         hasStarted = false;
         audioSource = GameObject.Find("Game Manager").GetComponent<AudioSource>();
         countdown = GameObject.Find("Countdown");
+        AI1.AddComponent<AIBehaviour>();
+        AI1.GetComponent<AIBehaviour>().AIPlayer = AI1;
+        AI2.AddComponent<AIBehaviour>();
+        AI2.GetComponent<AIBehaviour>().AIPlayer = AI2;
+        AI3.AddComponent<AIBehaviour>();
+        AI3.GetComponent<AIBehaviour>().AIPlayer = AI3;
     }
 
     // Update is called once per frame
