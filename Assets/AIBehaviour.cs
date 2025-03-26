@@ -24,7 +24,7 @@ public class AIBehaviour : MonoBehaviour
         // AI moves constantly
         if (GameState.hasStarted)
         {
-            if (body.velocity.x < Random.Range(4, 5))
+            if (body.velocity.x < 5)
             {
                 body.AddForce(Vector3.right, ForceMode.Acceleration);
             }
@@ -44,7 +44,7 @@ public class AIBehaviour : MonoBehaviour
                 if (hit.distance < Random.Range(0.5f, 1.5f) && !jumped)
                 {
                     AIPlayer.transform.position = AIPlayer.transform.position + new Vector3(0, 0.05f, 0);
-                    body.AddForce(Vector3.up * 400);
+                    body.AddForce(Vector3.up * 600);
                     jumped = true;
                 }
             }

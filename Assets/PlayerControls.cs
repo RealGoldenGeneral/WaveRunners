@@ -44,7 +44,7 @@ public class PlayerControls : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space) && !jumped)
             {
                 player.transform.position = player.transform.position + new Vector3(0, 0.05f, 0);
-                rb.AddForce(Vector3.up * 400);
+                rb.AddForce(Vector3.up * 600);
                 jumped = true;
                 flipMeter.Appear();
                 flipCounter.Appear();
