@@ -114,7 +114,7 @@ public class PlayerControls : MonoBehaviour
             // Boost mechanic
             if (player.transform.eulerAngles.z > 355 || player.transform.eulerAngles.z < 5)
             {
-                rb.velocity = rb.velocity + new Vector3(flips * 5, 0, 0);
+                rb.velocity = rb.velocity + new Vector3(flips * 10, 0, 0);
             }
 
             // Reset orientation and flips
