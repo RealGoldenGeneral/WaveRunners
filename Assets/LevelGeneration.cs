@@ -29,7 +29,6 @@ public class LevelGeneration : MonoBehaviour
         _waveHeight = 0;
         _barHeight = 0;
         _direction = true;
-        _sampleCount = -5;
         _updateCount = 0;
         _levelLength = TransformAudio._samples.Length;
         _increment = 0.0000000001f;
@@ -84,17 +83,10 @@ public class LevelGeneration : MonoBehaviour
                 _bars[i].GetComponent<MeshCollider>().sharedMesh = _meshes[i];
                 _barHeights[i] = _barHeights[i + 1];
             }
-
-            // Randomness value reset
-            if (_sampleCount > 5)
-            {
-                _sampleCount = -5;
-            }
-
             // Get new wave height and reset increment
             if (_waveHeight <= 0)
             {
-                _waveHeight = TransformAudio._samples[TransformAudio._samples.Length / 2 + _sampleCount];
+                _waveHeight = TransformAudio._samples[Random.Range(0, TransformAudio._samples.Length - 1)];
                 _increment = 0.0000000001f;
             }
 
