@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\1970n\\Wave Runners New\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\levelgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\levelgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|c:\\users\\1970n\\wave runners new\\assets\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\meshgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\meshgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\aibehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,24 +15,32 @@
       "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\positiontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\positiontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|c:\\users\\1970n\\wave runners new\\assets\\levelgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\levelgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\insertaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\insertaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\flipcounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\flipcounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\meshgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\meshgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\camerasidescrolling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\camerasidescrolling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\countdowntext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\countdowntext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\flipcounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\flipcounter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\positiontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\positiontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\countdowntext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\countdowntext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\transformaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "FlipCounter.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\FlipCounter.cs",
               "RelativeDocumentMoniker": "Assets\\FlipCounter.cs",
@@ -90,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "CountdownText.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\CountdownText.cs",
               "RelativeDocumentMoniker": "Assets\\CountdownText.cs",
@@ -102,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "PositionText.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\PositionText.cs",
               "RelativeDocumentMoniker": "Assets\\PositionText.cs",
@@ -110,7 +110,8 @@
               "RelativeToolTip": "Assets\\PositionText.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T23:50:39.774Z"
+              "WhenOpened": "2025-03-11T23:50:39.774Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -122,17 +123,18 @@
               "RelativeToolTip": "Assets\\CameraSideScrolling.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwB4AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T21:01:22.042Z"
+              "WhenOpened": "2025-03-04T21:01:22.042Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "LevelGeneration.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\LevelGeneration.cs",
               "RelativeDocumentMoniker": "Assets\\LevelGeneration.cs",
               "ToolTip": "C:\\Users\\1970n\\Wave Runners New\\Assets\\LevelGeneration.cs",
               "RelativeToolTip": "Assets\\LevelGeneration.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAYwF0AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAuwFMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T20:33:30.01Z",
               "EditorCaption": ""
@@ -147,36 +149,38 @@
               "RelativeToolTip": "Assets\\InsertAudio.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAAwB0AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T00:45:05.146Z"
+              "WhenOpened": "2025-03-04T00:45:05.146Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AIBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\AIBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\AIBehaviour.cs",
               "ToolTip": "C:\\Users\\1970n\\Wave Runners New\\Assets\\AIBehaviour.cs",
               "RelativeToolTip": "Assets\\AIBehaviour.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCoAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCIAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T23:27:25.56Z"
+              "WhenOpened": "2025-02-28T23:27:25.56Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PlayerControls.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\PlayerControls.cs",
               "RelativeDocumentMoniker": "Assets\\PlayerControls.cs",
               "ToolTip": "C:\\Users\\1970n\\Wave Runners New\\Assets\\PlayerControls.cs",
               "RelativeToolTip": "Assets\\PlayerControls.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAYwHkAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwG8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-31T03:30:58.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "MeshGeneration.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\MeshGeneration.cs",
               "RelativeDocumentMoniker": "Assets\\MeshGeneration.cs",
@@ -184,19 +188,21 @@
               "RelativeToolTip": "Assets\\MeshGeneration.cs",
               "ViewState": "AgIAAMIAAAAAAAAAAAAgwM0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-27T22:43:25.913Z"
+              "WhenOpened": "2025-01-27T22:43:25.913Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "GameState.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\GameState.cs",
               "RelativeDocumentMoniker": "Assets\\GameState.cs",
               "ToolTip": "C:\\Users\\1970n\\Wave Runners New\\Assets\\GameState.cs",
               "RelativeToolTip": "Assets\\GameState.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAxwDQAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAmwDQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T23:00:53.165Z"
+              "WhenOpened": "2025-03-10T23:00:53.165Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

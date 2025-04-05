@@ -53,7 +53,7 @@ public class PlayerControls : MonoBehaviour
             // Rotate Forwards
             if (Input.GetKey(KeyCode.D) && jumped)
             {
-                player.transform.Rotate(Vector3.forward * 540 * Time.deltaTime);
+                player.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
                 flipMeter.SetFlipProgress(player.transform.eulerAngles.z);
                 if (player.transform.eulerAngles.z > 359 && !flippedOnce)
                 {
@@ -79,12 +79,12 @@ public class PlayerControls : MonoBehaviour
             {
                 player.transform.Rotate(Vector3.back * 360 * Time.deltaTime);
                 flipMeter.SetFlipProgress(player.transform.eulerAngles.z);
-                if (player.transform.eulerAngles.z > 359 && !flippedOnce)
+                if (player.transform.eulerAngles.z < 1 && !flippedOnce)
                 {
                     flips++;
                     flippedOnce = true;
                 }
-                if (player.transform.eulerAngles.z < 1 && flippedOnce)
+                if (player.transform.eulerAngles.z > 359 && flippedOnce)
                 {
                     flippedOnce = false;
                 }
