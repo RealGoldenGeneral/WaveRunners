@@ -99,6 +99,11 @@ public class PlayerControls : MonoBehaviour
             }
         }
         flipCounter.SetCounter(flips);
+
+        if (player.transform.position.y < -4)
+        {
+            player.transform.position = new Vector3(player.transform.position.y + 1, 0, player.transform.position.z);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

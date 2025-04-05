@@ -29,17 +29,23 @@ public class AIBehaviour : MonoBehaviour
                 body.AddForce(Vector3.right, ForceMode.Acceleration);
             }
         }
+
+        if (AIPlayer.transform.position.y < -4)
+        {
+            AIPlayer.transform.position = new Vector3(AIPlayer.transform.position.x - 1, 0, AIPlayer.transform.position.z);
+        }
     }
 
     private void FixedUpdate()
     {
         RaycastHit hit;
         LayerMask mask = LayerMask.GetMask("Waves");
+        Vector3 rayPosition = new Vector3(AIPlayer.transform.position.x, -3.95f, AIPlayer.transform.position.z);
 
         if (GameState.hasStarted)
         {
             // AI jumps when it detects a wave
-            if (Physics.Raycast(AIPlayer.transform.position, Vector3.right, out hit, mask))
+            if (Physics.Raycast(rayPosition, Vector3.right, out hit, mask))
             {
                 if (hit.distance < 1 && !jumped)
                 {
@@ -52,7 +58,7 @@ public class AIBehaviour : MonoBehaviour
             // AI flips when it is in the air
             if (Physics.Raycast(AIPlayer.transform.position, Vector3.down, out hit, mask))
             {
-                if (hit.distance > 1 && jumped)
+                if (hit.distance > 1.5f && jumped)
                 {
                     AIPlayer.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
                     if (AIPlayer.transform.eulerAngles.z > 359 && !flippedOnce)
