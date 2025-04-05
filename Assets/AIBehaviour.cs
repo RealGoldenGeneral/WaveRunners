@@ -41,7 +41,7 @@ public class AIBehaviour : MonoBehaviour
             // AI jumps when it detects a wave
             if (Physics.Raycast(AIPlayer.transform.position, Vector3.right, out hit, mask))
             {
-                if (hit.distance < Random.Range(0.5f, 1.5f) && !jumped)
+                if (hit.distance < 1 && !jumped)
                 {
                     AIPlayer.transform.position = AIPlayer.transform.position + new Vector3(0, 0.05f, 0);
                     body.AddForce(Vector3.up * 600);
@@ -52,7 +52,7 @@ public class AIBehaviour : MonoBehaviour
             // AI flips when it is in the air
             if (Physics.Raycast(AIPlayer.transform.position, Vector3.down, out hit, mask))
             {
-                if (hit.distance > Random.Range(0.5f, 1.5f) && jumped)
+                if (hit.distance > 1 && jumped)
                 {
                     AIPlayer.transform.Rotate(Vector3.forward * 360 * Time.deltaTime);
                     if (AIPlayer.transform.eulerAngles.z > 359 && !flippedOnce)

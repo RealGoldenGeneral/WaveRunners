@@ -310,7 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sampleCubePrefab: {fileID: 6113102894618846674, guid: 401d8319ff3bdc74d934f474065806cf, type: 3}
-  _maxScale: 1
+  _maxScale: 0.5
   _barScale: 0.8
   _barMaterial: {fileID: 2100000, guid: e7ee56c3c5b54c142b0b3414a338aced, type: 2}
   _invisibleWallMaterial: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
