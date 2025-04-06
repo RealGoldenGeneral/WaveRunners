@@ -27,28 +27,36 @@ public class InsertAudio : MonoBehaviour
     }
     private void onClick()
     {
-        // Opens file explorer for audio file (only mpeg for now)
-        var paths = StandaloneFileBrowser.OpenFilePanel("Select Audio", "", "mp3", false);
-        if (paths.Length > 0)
-        {
-            StartCoroutine(OutputRoutine(new System.Uri(paths[0]).AbsoluteUri));
-        }
-    }
-
-    private IEnumerator OutputRoutine(string url)
-    {
-        // Loads audio from file and starts game (only takes mpeg for now)
-        var loader = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
-        yield return loader.SendWebRequest();
-        audioClip = DownloadHandlerAudioClip.GetContent(loader);
+        //// Opens file explorer for audio file (only mpeg for now)
+        //var paths = StandaloneFileBrowser.OpenFilePanel("Select Audio", "", "mp3", false);
+        //if (paths.Length > 0)
+        //{
+        //    StartCoroutine(OutputRoutine(new System.Uri(paths[0]).AbsoluteUri));
+        //}
         gameManager.SetActive(true);
         player.SetActive(true);
         AI1.SetActive(true);
         AI2.SetActive(true);
         AI3.SetActive(true);
-        audioSource.clip = audioClip;
         button.gameObject.SetActive(false);
         positionText.SetActive(true);
         countdownText.SetActive(true);
     }
+
+    //private IEnumerator OutputRoutine(string url)
+    //{
+    //    // Loads audio from file and starts game (only takes mpeg for now)
+    //    var loader = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
+    //    yield return loader.SendWebRequest();
+    //    audioClip = DownloadHandlerAudioClip.GetContent(loader);
+    //    gameManager.SetActive(true);
+    //    player.SetActive(true);
+    //    AI1.SetActive(true);
+    //    AI2.SetActive(true);
+    //    AI3.SetActive(true);
+    //    audioSource.clip = audioClip;
+    //    button.gameObject.SetActive(false);
+    //    positionText.SetActive(true);
+    //    countdownText.SetActive(true);
+    //}
 }
