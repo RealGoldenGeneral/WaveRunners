@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\1970n\\Wave Runners New\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\levelgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\levelgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\aibehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\aibehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|c:\\users\\1970n\\wave runners new\\assets\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\playercontrols.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\aibehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\aibehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|c:\\users\\1970n\\wave runners new\\assets\\levelgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|solutionrelative:assets\\levelgeneration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0C5BEE1B-F10D-6707-24F6-961250328DEE}|Assembly-CSharp.csproj|C:\\Users\\1970n\\Wave Runners New\\assets\\gamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,7 +126,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LevelGeneration.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\LevelGeneration.cs",
               "RelativeDocumentMoniker": "Assets\\LevelGeneration.cs",
@@ -151,15 +151,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AIBehaviour.cs",
               "DocumentMoniker": "C:\\Users\\1970n\\Wave Runners New\\Assets\\AIBehaviour.cs",
               "RelativeDocumentMoniker": "Assets\\AIBehaviour.cs",
               "ToolTip": "C:\\Users\\1970n\\Wave Runners New\\Assets\\AIBehaviour.cs",
               "RelativeToolTip": "Assets\\AIBehaviour.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwCIAAAB7AAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCIAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T23:27:25.56Z"
+              "WhenOpened": "2025-02-28T23:27:25.56Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -169,7 +170,7 @@
               "RelativeDocumentMoniker": "Assets\\PlayerControls.cs",
               "ToolTip": "C:\\Users\\1970n\\Wave Runners New\\Assets\\PlayerControls.cs",
               "RelativeToolTip": "Assets\\PlayerControls.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAYwDsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAYwGgAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-31T03:30:58.197Z",
               "EditorCaption": ""

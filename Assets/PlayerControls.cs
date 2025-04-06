@@ -102,7 +102,7 @@ public class PlayerControls : MonoBehaviour
 
         if (player.transform.position.y < -4)
         {
-            player.transform.position = new Vector3(player.transform.position.x + 1, 0, player.transform.position.z);
+            player.transform.position = new Vector3(player.transform.position.x + 5, 0, player.transform.position.z);
         }
     }
 

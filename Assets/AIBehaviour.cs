@@ -32,7 +32,7 @@ public class AIBehaviour : MonoBehaviour
 
         if (AIPlayer.transform.position.y < -4)
         {
-            AIPlayer.transform.position = new Vector3(AIPlayer.transform.position.x - 1, 0, AIPlayer.transform.position.z);
+            AIPlayer.transform.position = new Vector3(AIPlayer.transform.position.x + 5, 0, AIPlayer.transform.position.z);
         }
     }
 
